@@ -54,6 +54,7 @@ README.md
 - Prevents empty pending title and empty quick-task text
 - Confirms before deleting pending/todo
 
+
 ## Packaging for Windows (EXE)
 This repository now includes:
 - `packaging/productivity_planner.spec`
@@ -68,6 +69,15 @@ Output:
 - `dist\ProductivityPlanner.exe`
 
 > Note: EXE generation must be done on Windows (or equivalent Windows build environment).
+## Packaging for Windows (basic)
+Use PyInstaller:
+```bash
+pip install pyinstaller
+cd productivity_app
+pyinstaller --noconfirm --onefile --windowed app.py
+```
+Then distribute `dist/app.exe`.
+
 
 ## Design Decisions
 - **PySide6** selected for quick clean Windows-native desktop MVP.
